@@ -32,3 +32,11 @@ pagesディレクレリにファイルを作成すると、そのファイルが
 ・publicをルートとしたルートパスで記述する　<br />
 ex) publicディレクレリの直下にvercel.svgがある場合　<br />
 `<img src="/vercel.svg" alt="vercel logo" className="logo" />`
+
+#### メタデータを編集する
+通常のReactアプリケーションでは基本的にheadタグを直接編集することができない(ライブラリを使用すれば可能)。<br />
+つまりページごとにheadタグを設定することができない。<br />
+=> SEO的に不利　<br />
+Next.jsではheadタグではなく、Headコンポーネントの使用する　<br />
+・Headコンポーネントimport　<br />
+・Headコンポーネントは<head>に変換される
