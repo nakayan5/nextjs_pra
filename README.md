@@ -16,8 +16,11 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 pagesディレクレリにファイルを作成すると、そのファイルがWebサイトの1ページになる <br />
 ・`pages/index.js` => '/' つまりroute <br />
 ・`pages/posts/first-post.js` => '/posts/first-post'
+素のReactではreact-routerを使用するのが一般的であるが、記述が大変だった。Next.jsではその煩わしさがない<br />
+・Linkコンポーネントの使用する （client-side navigationの役割を担う) <br />
+`<Link href="/posts/first-post"> <a>クリック</a> </Link>`
 
-##### Client-Side Navigation
+#### Client-Side Navigation
 ・JavaScriptのよってページを切り替える仕組み　<br />
 ・URLを切り替えてもページの再読み込みが不要　<br />
 ・ブラウザのページ遷移よりも高速　<br />
