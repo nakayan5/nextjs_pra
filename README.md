@@ -50,7 +50,7 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 クライアントサイドレンダリングではユーザーがWebページにアクセスして、Webページを表示しようとしている時にブラウザ側でHTMLを生成するやり方。) <br />
 また、Pre-renderingの中で①Static Generation と ②Server-side Rendering の2種類があり、１つのアプリケーションの中でページごとにStatic Generation か Server-side Rendering を選択することができる。<br/>
 
-#### Static Generation
+#### ■Static Generation
 ユーザーがアクセスした時ではなく、開発者がbuildした時にHTMLを生成する。<br />
 `$ next build` <br />
 最適なページは更新頻度が低く、user:contents = 1:N <br/>
@@ -60,9 +60,14 @@ ex) ブログ、ECサイト、LP、問い合わせ
 1．ビルド時にHTMLをレンダリングする。<br/>
 ##### 外部データがある場合
 1. ビルド時にDBや外部APIからデータを取得する。この時,__getStaticProps()__ を使う。<br/>
-2. 取得したデータを使ってHTMLをレンダリングする。
+2. 取得したデータを使ってHTMLをレンダリングする。<br/>
+getStaticProps()<br/>
+・async/awaitを使って非同期処理を制御できる。 <br/>
+・開発環境ではリクエストごとに実行される。<br/>
+・本番環境ではビルド時に実行される関数　<br/>
+・＿pageコンポーネントでのみ使用可能＿　<br/>
 
-#### Server-side Rendering
+#### ■Server-side Rendering
 ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。<br/>
 最適なページは更新頻度が高く、user:contents = N:N <br/>
 ex) SNS、チャット、動画配信
