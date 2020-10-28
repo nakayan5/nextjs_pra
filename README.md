@@ -56,6 +56,12 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 最適なページは更新頻度が低く、user:contents = 1:N <br/>
 ex) ブログ、ECサイト、LP、問い合わせ
 
+##### 外部データが無い場合
+1．ビルド時にHTMLをレンダリングする。<br/>
+##### 外部データがある場合
+1. ビルド時にDBや外部APIからデータを取得する。この時,__getStaticProps()__ を使う。<br/>
+2. 取得したデータを使ってHTMLをレンダリングする。
+
 #### Server-side Rendering
 ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。<br/>
 最適なページは更新頻度が高く、user:contents = N:N <br/>
