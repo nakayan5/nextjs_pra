@@ -57,6 +57,6 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 ex) ブログ、ECサイト、LP、問い合わせ
 
 #### Server-side Rendering
-ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。
+ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。<br/>
 最適なページは更新頻度が高く、user:contents = N:N <br/>
 ex) SNS、チャット、動画配信
