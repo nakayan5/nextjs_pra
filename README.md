@@ -53,6 +53,10 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 #### Static Generation
 ユーザーがアクセスした時ではなく、開発者がbuildした時にHTMLを生成する。<br />
 `$ next build` <br />
+最適なページは更新頻度が低く、user:contents = 1:N <br/>
+ex) ブログ、ECサイト、LP、問い合わせ
 
 #### Server-side Rendering
 ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。
+最適なページは更新頻度が高く、user:contents = N:N <br/>
+ex) SNS、チャット、動画配信
