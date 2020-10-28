@@ -14,7 +14,7 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 pagesディレクレリにファイルを作成すると、そのファイルがWebサイトの1ページになる <br />
 ・`pages/index.js` => '/' つまりroute <br />
 ・`pages/posts/first-post.js` => '/posts/first-post' <br />
-素のReactではreact-routerを使用するのが一般的であるが、記述が大変だった。Next.jsではその煩わしさがない<br />
+素のReactではreact-routerを使用するのが一般的であるが、記述が大変だった。Next.jsではその煩わしさがない。<br />
 ・Linkコンポーネントの使用する （client-side navigationの役割を担う) <br />
 `<Link href="/posts/first-post"> <a>クリック</a> </Link>`
 
@@ -24,7 +24,7 @@ pagesディレクレリにファイルを作成すると、そのファイルが
 ・ブラウザのページ遷移よりも高速　<br />
 ・クライアントの状態を保ってページ遷移
 
-### 4. 画像 メタデータ CSS
+### 4. 画像&メタデータ&CSS
 #### 静的ファイルを追加する
 ・publicディレクレリのファイルを参照可能 <br />
 ・publicをルートとしたルートパスで記述する　<br />
@@ -48,3 +48,11 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 => 検索エンジンのクローラーにコンテンツを見せることができる。<br/>
 (通常のReactのアプリケーションではクライアントサイドレンダリングでHTMLを生成する。<br />
 クライアントサイドレンダリングではユーザーがWebページにアクセスして、Webページを表示しようとしている時にブラウザ側でHTMLを生成するやり方。) <br />
+また、Pre-renderingの中で①Static Generation と ②Server-side Rendering の2種類があり、１つのアプリケーションの中でページごとにStatic Generation か Server-side Rendering を選択することができる。<br/>
+
+#### Static Generation
+ユーザーがアクセスした時ではなく、開発者がbuildした時にHTMLを生成する。<br />
+`$ next build` <br />
+
+#### Server-side Rendering
+ユーザーがアクセスした時にサーバサイド側でHTMLを生成する。
