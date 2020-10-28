@@ -1,6 +1,6 @@
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
-# Next.js
+# 1.Next.js
 
 ### Next.jsで環境構築するメリット
 ・Babel＆Webpackの複雑な環境設定が不要　<br />
@@ -9,10 +9,10 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 ・Renderringのタイミングを選択できる <br />
 ・サーバサイドレンダの処理を簡単に実装できる <br />
 
-### 環境構築
+### 2.環境構築
 `npx create-next-app プロジェクト名` <br />
 
-### ルーティング処理
+### 3.ルーティング処理
 pagesディレクレリにファイルを作成すると、そのファイルがWebサイトの1ページになる <br />
 ・`pages/index.js` => '/' つまりroute <br />
 ・`pages/posts/first-post.js` => '/posts/first-post' <br />
@@ -26,11 +26,11 @@ pagesディレクレリにファイルを作成すると、そのファイルが
 ・ブラウザのページ遷移よりも高速　<br />
 ・クライアントの状態を保ってページ遷移
 
-### 画像 メタデータ CSS
+### 4.画像 メタデータ CSS
 #### 静的ファイルを追加する
 ・publicディレクレリのファイルを参照可能 <br />
 ・publicをルートとしたルートパスで記述する　<br />
-ex) publicディレクレリの直下にvercel.svgがある場合　<br />
+　ex) publicディレクレリの直下にvercel.svgがある場合　<br />
 `<img src="/vercel.svg" alt="vercel logo" className="logo" />`
 
 #### メタデータを編集する
@@ -39,4 +39,9 @@ ex) publicディレクレリの直下にvercel.svgがある場合　<br />
 => SEO的に不利　<br />
 Next.jsではheadタグではなく、Headコンポーネントの使用する　<br />
 ・Headコンポーネントimport　<br />
-・Headコンポーネントは<head>に変換される
+・Headコンポーネントは<head>に変換される <br />
+・ページごとにメタデータを設定できる <br />
+　<title> == サイトやページのタイトル　<br />
+　<meta description="..."> == サイトやページの説明　<br />
+　<meta property="og:..."> == SNSシェア時にサイトやページ情報を表示するOPGタグ　<br />
+  <link href="..."> == CSSやCDNの読み込み
