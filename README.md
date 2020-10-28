@@ -41,7 +41,3 @@ Next.jsではheadタグではなく、Headコンポーネントの使用する�
 ・Headコンポーネントimport　<br />
 ・Headコンポーネントは<head>に変換される <br />
 ・ページごとにメタデータを設定できる <br />
-　<title> == サイトやページのタイトル　<br />
-　<meta description="..."> == サイトやページの説明　<br />
-　<meta property="og:..."> == SNSシェア時にサイトやページ情報を表示するOPGタグ　<br />
-  <link href="..."> == CSSやCDNの読み込み
