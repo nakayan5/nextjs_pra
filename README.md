@@ -81,5 +81,13 @@ ex) SNS、チャット、動画配信
 ### 6. API
 
 ### 7. TypeScript
-`touch tsconfig.json`  
-`yarn add --dev typescript @types/react @types/node`  
+`$ touch tsconfig.json`  
+`$ yarn add --dev typescript @types/react @types/node`  
+
+### 8. ESLint
+`$ npx eslint --init`
+
+### 9. Prettier
+ESLintと合わせて使う場合は追加の設定が必要  
+- eslint-config-prettier : 競合する設定を無効にする  
+- eslint-plugin-prettier : ESLint上でPrettierを実行する
