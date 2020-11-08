@@ -7,6 +7,13 @@ This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 ・Renderringのタイミングを選択できる <br />
 ・サーバサイドレンダリングの処理を簡単に実装できる <br />
 
+■ Code Splitting  
+Next.jsが自動的にコード分割を行い、各ページはそのページに必要なものだけをロードする  
+
+■ プリフェッチ  
+Linkコンポーネントがブラウザのビューポートに表示されるたびに、バックグラウンドでリンクされたページのコードを自動的にコンテンツを取得する
+
+
 ### 2. 環境構築
 `npx create-next-app プロジェクト名` <br />
 
