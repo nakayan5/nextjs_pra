@@ -98,3 +98,10 @@ ex) SNS、チャット、動画配信
 ESLintと合わせて使う場合は追加の設定が必要  
 - eslint-config-prettier : 競合する設定を無効にする  
 - eslint-plugin-prettier : ESLint上でPrettierを実行する
+
+
+### 10. Material UI
+https://tech.playground.style/javascript/next-material-ui/  
+https://material-ui.com/guides/server-rendering/  
+https://github.com/mui-org/material-ui/blob/master/examples/nextjs/pages/_app.js  
+https://github.com/mui-org/material-ui/blob/master/examples/nextjs/pages/_document.js
