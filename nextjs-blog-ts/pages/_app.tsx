@@ -1,14 +1,13 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
-// import { ThemeProvider } from "theme-ui";
-// import { theme } from "src/logic/styles";
-// import styled from "@emotion/styled";
+import { ThemeProvider } from "theme-ui";
+import { theme } from "src/logic/styles";
+import styled from "@emotion/styled";
 // import { Header } from "src/components";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    // <ThemeProvider theme={theme}>
-    <>
+    <ThemeProvider theme={theme}>
       <Head>
         <title>NextJS Blog</title>
         <link
@@ -17,19 +16,18 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
 
-      {/* <Container>
-        <Header />
+      <Container>
+        {/* <Header /> */}
         <main>
           <Component {...pageProps} />
         </main>
-      </Container> */}
-      </>
-    // {/* </ThemeProvider> */}
+      </Container>
+    </ThemeProvider>
   );
 }
 
-// const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// `;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
