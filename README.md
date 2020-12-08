@@ -1,5 +1,6 @@
 # nextjs_pra
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+This is a starter template for [Learn Next.js](https://nextjs.org/learn).  
+Next.jsの学習用レポジトリ
 
 ### 1. Next.jsで環境構築するメリット
 ・Babel＆Webpackの複雑な環境設定が不要　<br />
