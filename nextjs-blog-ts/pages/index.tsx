@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <Container>
       <H2>Home</H2>
+      <img src="/images/profile.jpg" alt=""/>
     </Container>
   )
 }
