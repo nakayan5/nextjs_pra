@@ -35,6 +35,16 @@ export async function getStaticPaths() {
     }
 }
 
+// console.log(paths);
+//     [ 
+//       { params: { id: 'pre-rendering' } }, 
+//       { params: { id: 'ssg-ssr' } } 
+//     ]
+
+
+// 最後に、ここでまた getStaticProps を実装します。
+// 今回は、受け取ったidに基づいて必要なデータを取得します。
+// getStaticProps は params を受け取りますが、そこには id が含まれています。
 // getStaticPropsでデータを取得する
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -43,5 +53,5 @@ export async function getStaticProps({ params }) {
         postData
       }
     }
-  }
+}
 

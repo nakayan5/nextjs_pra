@@ -45,6 +45,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 // getStaticPathsでreturnしたtitleがgetStaticPropsに渡されてpropsとして返される
 // そして返された値がdefaultのPostコンポーネントに渡される
 
+// 本質的には、getStaticProps を使うことで Next.js にこう伝えることができるということです。
+// 「このページにはいくつか外部に依存しているデータがあるよ。だからビルド時にこのページをプリレンダリングするときは、まずその依存関係をしっかり解決してよ！」
+
 export const getStaticProps: GetStaticProps = async ({ params: { title } }) => {
     const { content, data } = getPostAll().find(m => m.data.title === title)
     const source = await renderToString(content)
