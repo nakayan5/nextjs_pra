@@ -10,6 +10,7 @@ import html from 'remark-html'
 // 定数postsDirectoryに代入する
 const postsDirectory = path.join(process.cwd(), 'posts')
 
+// 投稿記事のデータを並び替えてしゅとくする関数
 export function getSortedPostsData() {
     // /posts　配下のファイル名を取得する
     const fileNames = fs.readdirSync(postsDirectory) // [ 'pre-rendering.md', 'ssg-ssr.md' ]
@@ -43,6 +44,7 @@ export function getSortedPostsData() {
     })
 }
 
+// ■ 全ての投稿記事のidを取得する関数 ■
 export function getAllPostIds() {
     // pre-rendering と ssg-ssr.mdのファイル名を取得する
     const fileNames = fs.readdirSync(postsDirectory) // [ 'pre-rendering.md', 'ssg-ssr.md' ]
@@ -81,14 +83,16 @@ export function getAllPostIds() {
 // id に基づいてブログの投稿データを返します。
 // ファイルの中身を読み込んでgray-matterでパースする
 // remarkメソッドを非同期処理で使用したいのでasync/awaitを使用する
+
+// 投稿記事のデータを取得する関数
 export async function getPostData(id) {
     const fullPath = path.join(postsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
 
-    // Use gray-matter to parse the post metadata section
+    // 投稿のメタデータ部分を解析するために gray-matter を使う
     const matterResult = matter(fileContents)
 
-     // 投稿のメタデータ部分を解析するために gray-matter を使う
+    // マークダウンを HTML 文字列に変換するために remark を使う
     const processedContent = await remark()
       .use(html)
       .process(matterResult.content)
@@ -100,4 +104,18 @@ export async function getPostData(id) {
       contentHtml,
       ...matterResult.data
     }
+    // matterResult.dataは.mdファイルのメタ情報を取得する
 }
+
+// console.log(contentHtml);
+// <p>We recommend using <strong>Static Generation</strong> (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page 
+// on every request.</p>
+// <p>You can use Static Generation for many types of pages, including:</p>
+// <ul>
+//    <li>Marketing pages</li>
+//    <li>Blog posts</li>
+//    <li>E-commerce product listings</li>
+//    <li>Help and documentation</li>
+// </ul>
+// <p>You should ask yourself: "Can I pre-render this page <strong>ahead</strong> of a user's request?" If the answer is yes, then you should choose Static Generation.</p>
+// <p>On the other hand, Static Generation is <strong>not</strong> a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.</p>
